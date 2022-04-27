@@ -9,5 +9,3 @@ In the project directory, you can run:
 
 ### `This is car service Demo Project`
 * I am using html, css, React.js, Firebase hook, MongoDB & Heroku 
-*
-*
