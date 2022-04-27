@@ -6,9 +6,9 @@ const useToken = (user) => {
   useEffect(() => {
     const getToken = async () => {
       const email = user?.user?.email;
-      if(email){
+      if (email) {
         const { data } = await axios.post(
-          "https://stormy-shore-62736.herokuapp.com/login",
+          "https://radiant-beach-71414.herokuapp.com/login",
           { email }
         );
         setToken(data.accessToken);

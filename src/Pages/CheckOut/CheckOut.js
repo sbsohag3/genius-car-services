@@ -4,7 +4,7 @@ import useServiceDetail from "../../hooks/useServiceDetail";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
 import axios from "axios";
-import { toast} from "react-toastify";
+import { toast } from "react-toastify";
 
 const CheckOut = () => {
   const { serviceId } = useParams();
@@ -19,13 +19,15 @@ const CheckOut = () => {
       address: event.target.address.value,
       phone: event.target.phone.value,
     };
-    axios.post("https://stormy-shore-62736.herokuapp.com/order", order).then((response) => {
-      const { data } = response;
-      if (data.insertedId) {
-        toast("Your order is booked!!!");
-        event.target.reset();
-      }
-    });
+    axios
+      .post("https://radiant-beach-71414.herokuapp.com/order", order)
+      .then((response) => {
+        const { data } = response;
+        if (data.insertedId) {
+          toast("Your order is booked!!!");
+          event.target.reset();
+        }
+      });
   };
   return (
     <div className="w-25 mx-auto text-center">
@@ -96,7 +98,6 @@ const CheckOut = () => {
       </form>
     </div>
   );
-
 };
 
 export default CheckOut;

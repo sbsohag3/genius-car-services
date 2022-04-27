@@ -5,7 +5,7 @@ const AddService = () => {
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => {
     console.log(data);
-    const url = `https://stormy-shore-62736.herokuapp.com/service`;
+    const url = `https://radiant-beach-71414.herokuapp.com/service`;
     fetch(url, {
       method: "POST",
       headers: {

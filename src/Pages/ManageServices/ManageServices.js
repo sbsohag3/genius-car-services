@@ -6,7 +6,7 @@ const ManageServices = () => {
   const handleDelete = (id) => {
     const proceed = window.confirm("Are you sure?");
     if (proceed) {
-      const url = `https://stormy-shore-62736.herokuapp.com/service/${id}`;
+      const url = `https://radiant-beach-71414.herokuapp.com/service/${id}`;
       fetch(url, {
         method: "DELETE",
       })
@@ -14,7 +14,7 @@ const ManageServices = () => {
         .then((data) => {
           console.log(data);
           const remaining = services.filter((service) => service._id !== id);
-          setServices(remaining)
+          setServices(remaining);
         });
     }
   };
