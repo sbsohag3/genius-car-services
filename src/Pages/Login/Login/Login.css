@@ -1,0 +1,9 @@
+.login-form{
+ margin: 0 auto;
+  width: 40%;
+  padding: 30px;
+  border-radius: 10px
+}
+.form-text{
+  text-align: center;
+}
